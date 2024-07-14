@@ -1,0 +1,101 @@
+/* public/css/user.css */
+
+/* Style untuk kontainer utama */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    margin-top: 130px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Style untuk heading */
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Style untuk paragraf */
+.container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Bold untuk label */
+.container p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style untuk pengaturan lain */
+.container .settings {
+    margin-top: 30px;
+}
+
+.settings h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.settings .setting-item {
+    margin-bottom: 15px;
+}
+
+.settings .setting-item label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.settings .setting-item input,
+.settings .setting-item select,
+.settings .setting-item button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.settings .setting-item button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings .setting-item button:hover {
+    background-color: #4cae4c;
+}
+/* public/css/user.css */
+
+/* Style untuk tombol update */
+.update-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+/* Tambahkan ini di user-information.css */
+#nama,
+#email,
+#no_telepon,
+#alamat {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}

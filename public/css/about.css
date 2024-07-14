@@ -1,0 +1,119 @@
+* {
+    /*border: black 1px solid;*/
+    font-family: "Lato", sans-serif;
+}
+/*about*/
+#about {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+}
+
+.about-section h1 {
+    text-align: center;
+    color: #5c3d2e;
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    margin-top: 90px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.description {
+    flex: 1;
+}
+
+.description p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    padding: 60px 60px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 60%;
+    height: 60%;
+    margin: 20px;
+    /*margin: 40px 30px;*/
+    border-radius: 20px;
+    display: block;
+}
+/*kelebihan*/
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.description {
+    flex: 1;
+}
+.description p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    padding: 60px 60px;
+}
+
+.image img {
+    width: 50%;
+    height: 40%;
+    margin: 40px 30px;
+    border-radius: 20px;
+    display: block;
+}
+
+/* kelebihan */
+#kelebihan {
+    padding: 30px 70px 30px 30px;
+    font-family: "Lato", sans-serif;
+    /*background-color: #dad3be;*/
+}
+
+#kelebihan h1,
+h3 {
+    color: #5c3d2e;
+    /*color: #1a4d2e;*/
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#kelebihan p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.satu {
+    /*background-color: white;*/
+    background-color: #dad3be;
+    display: inline-block;
+    margin: 10px;
+    /*padding-top: 30px;*/
+    width: 22.5%;
+    border-radius: 20%;
+}
+
+/* Tambahkan efek hover */
+.satu:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.satu h3 {
+    color: #1a4d2e;
+    text-align: center;
+    margin: 20px;
+}
+
+.satu p {
+    color: black;
+    text-align: center;
+}

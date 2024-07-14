@@ -1,0 +1,107 @@
+/* resources/css/cart.css */
+
+#cart {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+#cart h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #343a40;
+}
+
+.table {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #dddddd;
+    text-align: center;
+    color: #555555;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+.table .btn-danger {
+    background-color: #ff4c4c;
+    border: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.table .btn-danger:hover {
+    background-color: #ff1c1c;
+}
+
+.table .btn-danger:focus {
+    outline: none;
+}
+
+.btn-primary {
+    display: block;
+    width: 150px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    float: right;
+    margin-top: 20px;
+    margin-right: 70px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+#cart p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555555;
+}

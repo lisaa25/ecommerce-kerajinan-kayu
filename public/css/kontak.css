@@ -1,0 +1,81 @@
+/*Kontak dan lokasi*/
+#lokasi-dan-kontak {
+    width: 100%;
+    margin: auto;
+    background-color: #dad3be;
+}
+
+#lokasi-dan-kontak h2 {
+    color: #5c3d2e;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.lokasi-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lokasi,
+.kontak {
+    margin: 50px;
+}
+
+#map-container,
+iframe {
+    width: 480px;
+    height: 350px;
+    margin-left: 30px;
+}
+
+.kontak form {
+    width: 500px;
+    padding: 20px;
+}
+
+.kontak label,
+button {
+    display: block;
+    margin: 10px 0;
+}
+
+.kontak input {
+    width: 100%;
+    height: 40px;
+}
+
+.kontak textarea {
+    width: 100%;
+    height: 70px;
+}
+
+button {
+    background-color: #5c3d2e;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #5c3d2e;
+}
+
+button:active {
+    background-color: #5c3d2e;
+    color: white;
+}
+
+.notification {
+    background-color: #4caf50; /* Warna latar belakang hijau */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 15px; /* Ruang dalam notifikasi */
+    margin-bottom: 15px; /* Jarak bawah dari elemen di atasnya */
+}

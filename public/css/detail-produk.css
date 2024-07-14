@@ -1,0 +1,63 @@
+#detail-produk {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px; /* Lebar maksimum kontainer */
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.col-md-6 {
+    flex: 1;
+    max-width: 45%;
+    margin: 10px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

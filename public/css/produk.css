@@ -1,0 +1,70 @@
+#produk {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /*color: #803d3b;*/
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.container {
+    margin-bottom: 50px; /* jarak container */
+    color: white;
+    background-color: #fff;
+    padding: 20px; /* Jarak di dalam container */
+    border-radius: 10px; /* Membuat sudut container melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 50%;*/
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #803d3b;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.price {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
