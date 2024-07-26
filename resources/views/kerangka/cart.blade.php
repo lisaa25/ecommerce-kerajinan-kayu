@@ -54,6 +54,7 @@
                     </tbody>
                 </table>
                 <a href="{{ route('checkout.show') }}" class="btn btn-primary">Checkout</a>
+                
             @else
                 <p>Keranjang belanja Anda kosong.</p>
             @endif

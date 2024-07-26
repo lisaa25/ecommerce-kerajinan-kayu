@@ -72,7 +72,17 @@
     <!-- script -->
     <script src="{{ asset('js/slider.js') }}"></script>
     <script src="{{ asset('js/cart.js') }}"></script>
-
+    <script>
+        feather.replace();
+        // Toggle menu script
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuToggle = document.querySelector('.menu-toggle');
+            var navbarNav = document.getElementById('navbar-nav');
+            menuToggle.addEventListener('click', function() {
+                navbarNav.classList.toggle('show');
+            });
+        });
+    </script>
     @yield('scripts')
 </body>
 

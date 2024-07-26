@@ -13,5 +13,12 @@ class ModelProduk extends Model
 
     protected $table ='tb_produk';
 
-    protected $fillable =['nama_produk', 'harga', 'gambar_produk', 'kategori', 'deskripsi'];
+    protected $fillable =[
+        'nama_produk',
+        'harga',
+        'gambar_produk', 
+        'kategori', 
+        'deskripsi', 
+        'is_active'
+    ];
 }

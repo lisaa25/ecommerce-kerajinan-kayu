@@ -10,8 +10,9 @@ use Illuminate\Database\Eloquent\Model;
 class ModelUser extends Authenticatable
 {
     use HasFactory, Notifiable;
+    //menentukan tabel sesuai dengan database
+    Protected $table ='tb_user';
 
-    Protected $table ='tb_user'; //menentukan tabel
     //menentukan atribut yg dapat di isi
     protected $fillable = [
         'nama',

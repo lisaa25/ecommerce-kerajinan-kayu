@@ -1,13 +1,9 @@
-<!-- Load an icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The sidebar -->
 <div class="sidebar">
-  <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-  <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-  <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="{{ route('admin.dashboard') }}"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="{{ route('admin.users') }}"><i class="fa fa-fw fa-user"></i>Data User</a>
+  <a href="{{ route('admin.products') }}"><i class="fa fa-fw fa-folder"></i>Data Produk</a>
+  <a href="{{ route('admin.products.create') }}"><i class="fa fa-fw fa-folder-o"></i>Input Produk</a>
+  <a href="{{ route('admin.messages') }}"><i class="fa fa-fw fa-envelope"></i>Pesan</a>
+  <a href="#contact"><i class="fa fa-fw fa-shopping-bag"></i>Order</a>
+  <a href="#contact"><i class="fa fa-fw fa-cog"></i>Pengaturan</a>
 </div>
-
-    <!-- memanggil css navbar -->
-    <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">

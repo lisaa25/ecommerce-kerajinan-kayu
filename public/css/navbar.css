@@ -200,7 +200,7 @@ body {
     text-align: center;
 }
 
-/* media quary */
+/* media queries */
 @media (max-width: 1300px) {
     #collection {
         font-size: 13px;
@@ -209,6 +209,7 @@ body {
         width: 25em;
     }
 }
+
 @media (max-width: 1212px) {
     #collection {
         font-size: 13px;
@@ -231,6 +232,7 @@ body {
         display: none;
     }
 }
+
 @media (max-width: 750px) {
     #shopName {
         font-size: 28px;
@@ -262,5 +264,120 @@ body {
 @media (max-width: 550px) {
     #container {
         padding: 20px 25px;
+    }
+}
+
+/* Penambahan untuk responsif */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar-nav a {
+        padding: 10px 0;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .dropdown-content a {
+        padding-left: 40px;
+    }
+
+    /* Tambah tombol menu untuk tampilan mobile */
+    .menu-toggle {
+        display: block;
+        background-color: #1a4d2e;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle:hover {
+        background-color: #145a32;
+    }
+}
+
+@media (max-width: 480px) {
+    #nama-toko {
+        font-size: 24px;
+    }
+
+    .icons a {
+        font-size: 1.2rem;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 14px;
+    }
+}
+
+/* Tambahkan di navbar.css */
+
+/* Style untuk tombol toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background-color: #1a4d2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu-toggle:hover {
+    background-color: #145a32;
+}
+
+/* Media queries untuk layar kecil */
+@media (max-width: 768px) {
+    #navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar-nav.show {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .dropdown-content a {
+        padding-left: 40px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }

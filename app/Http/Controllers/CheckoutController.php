@@ -47,7 +47,7 @@ class CheckoutController extends Controller
             Config::$isSanitized = config('midtrans.is_sanitized');
             Config::$is3ds = config('midtrans.is_3ds');
             $snapToken = Snap::getSnapToken($transaction);
-            //dd($transaction, $snapToken); // Debugging
+            // dd($transaction, $snapToken); // Debugging
         } catch (\Exception $e) {
             //dd($e->getMessage()); // Debugging
         }

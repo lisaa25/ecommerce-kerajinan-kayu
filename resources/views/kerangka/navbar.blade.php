@@ -18,7 +18,7 @@
     </div>
     <!-- Cart dan User Icons -->
     <div class="icons">
-        <a href="{{ route('cart.show') }}"><i data-feather="shopping-cart"></i><span class="shopping-cart-badge">0</span></a>
+        <a href="{{ route('checkout.show') }}"><i data-feather="shopping-cart"></i><span class="shopping-cart-badge">0</span></a>
         @auth
         <!-- menampilkan ikon user setelah login-->
             <a href="{{ route('user.show') }}"><i data-feather="user"></i></a> 

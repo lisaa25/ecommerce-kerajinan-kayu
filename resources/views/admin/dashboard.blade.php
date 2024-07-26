@@ -1,10 +1,42 @@
-
-<div class="admin-dashboard">
-    <h1>Welcome to Admin Dashboard</h1>
-   
-<div class="sidebar">
-    @include('admin.sidebar')
-</div>
-
-</div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/navbar.css') }}">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <div class="sidebar">
+            @include('admin.sidebar')
+        </div>
+        <div class="main-content">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Your Business Logo</h1>
+                </div>
+                <div class="user-info">
+                    @if(Auth::guard('admin')->check())
+                        <span>Welcome, {{ Auth::guard('admin')->user()->name }}</span>
+                        <a href="#" 
+                           onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @else
+                        <span>Please log in</span>
+                    @endif
+                </div>
+            </div>
+            @yield('content')
+        </div>
+    </div>
+</body>
+</html>

@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\ModelUser;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth; //untuk authentikasi
+use Illuminate\Support\Facades\Hash; //untuk hash password
 
 class AuthController extends Controller
 {
     //untuk registrasi user
     public function registration()
     {
-        return view('kerangka.register');
+        return view('kerangka.register'); //sesuaikan karo file blade mu
     }
 
     // registration user post dari form
