@@ -5,6 +5,7 @@
         <div class="container">
             <h1>KERAJINAN</h1>
             <div class="product-container">
+                <!--menampilkanproduk dg kategori kerajinan-->
                 @foreach ($kerajinan as $val)
                     <div class="col-md-3">
                         <a href="{{ route('produk.show', $val->id_produk) }}" class="card-link">
@@ -22,6 +23,7 @@
         <div class="container">
             <h1>FURNITURE</h1>
             <div class="product-container">
+                 <!--menampilkanproduk dg kategori furniture-->
                 @foreach ($furniture as $val)
                     <div class="col-md-3">
                         <a href="{{ route('produk.show', $val->id_produk) }}" class="card-link">

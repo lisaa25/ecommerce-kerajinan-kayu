@@ -30,7 +30,16 @@
                     <td>{{ $message->pesan }}</td>
                     <td>{{ $message->created_at->format('d/m/Y H:i') }}</td>
                     <td>
-                        <button class="btn-reply" data-id="{{ $message->id_kontak }}" data-email="{{ $message->email }}">Balas</button>
+                        <button class="btn-reply" data-id="{{ $message->id_kontak }}" data-email="{{ $message->email }}" title="Balas">
+                            <i class="fas fa-reply"></i>
+                        </button>
+                        <form action="{{ route('admin.messages.delete', $message->id_kontak) }}" method="POST" style="display:inline;" title="Hapus">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn-delete">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

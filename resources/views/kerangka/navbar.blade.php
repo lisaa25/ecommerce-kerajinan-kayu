@@ -4,10 +4,10 @@
         <a href="{{ url('#') }}"><b>DC WOODCRAFT</b></a>
     </div>
     <div id="navbar-nav">
-        <a href="{{ route('home') }}">Home</a>
-        <a href="{{ route('about') }}">About</a>
-        <a href="{{ route('viewproduk') }}">Product</a>
-        <a href="{{ route('kontak') }}">Contact</a>
+        <a href="{{ route('home') }}">Beranda</a>
+        <a href="{{ route('about') }}">Tentang</a>
+        <a href="{{ route('viewproduk') }}">Produk</a>
+        <a href="{{ route('kontak') }}">Kontak</a>
     </div>
     <!-- search -->
     <div id="search">
@@ -18,7 +18,7 @@
     </div>
     <!-- Cart dan User Icons -->
     <div class="icons">
-        <a href="{{ route('checkout.show') }}"><i data-feather="shopping-cart"></i><span class="shopping-cart-badge">0</span></a>
+        <a href="{{ route('cart.show') }}"><i data-feather="shopping-cart"></i><span class="shopping-cart-badge">0</span></a>
         @auth
         <!-- menampilkan ikon user setelah login-->
             <a href="{{ route('user.show') }}"><i data-feather="user"></i></a> 
@@ -57,3 +57,4 @@
 
 <!-- memanggil css navbar -->
 <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+

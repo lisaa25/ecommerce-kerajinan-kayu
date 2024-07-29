@@ -17,4 +17,5 @@
 <div class="content">
     @include('kerangka.kontak')
 </div>
+
 @endsection

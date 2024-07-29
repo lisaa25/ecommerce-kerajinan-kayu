@@ -20,7 +20,7 @@
             <h3>Follow us!</h3>
             <div class="social-icons">
                 <i data-feather="instagram"></i><a href="https://www.instagram.com/dc.woodcraft" target="_blank">Instagram</a>
-                <i data-feather="mail"></i><a href="mailto:dcwoodcraft.id@gmail.com" target="_blank">Email</a>
+                <i data-feather="facebook"></i><a href="https://www.facebook.com/DC Woodcraft Store" target="_blank">Facebook</a>
                 <i data-feather="youtube"></i><a href="https://www.youtube.com/@egi_irawan" target="_blank">Youtube</a>
             </div>
             <div class="copyright">

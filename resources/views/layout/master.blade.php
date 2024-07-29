@@ -23,6 +23,10 @@
         @yield('slider')
     </section>
 
+    <section id="header">
+        @yield('header')
+    </section>
+
     <section id="about">
         @yield('about')
     </section>
@@ -61,6 +65,10 @@
 
     <section id="checkout">
         @yield('checkout')
+    </section>
+
+    <section id="galeri">
+        @yield('galeri')
     </section>
 
     @include('kerangka.footer')

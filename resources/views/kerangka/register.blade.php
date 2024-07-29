@@ -35,7 +35,6 @@
             </div>
         </form>
     </section>
-
     <!-- memanggil css navbar -->
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection

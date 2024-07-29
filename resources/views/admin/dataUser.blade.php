@@ -8,6 +8,11 @@
             {{ session('success') }}
         </div>
     @endif
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
 
     <table class="table table-striped">
         <thead>
@@ -23,14 +28,22 @@
         <tbody>
             @foreach($users as $user)
             <tr>
-                <td>{{ $user->id_user }}</td>
+                <td>{{ $user->id }}</td>
                 <td>{{ $user->nama }}</td>
                 <td>{{ $user->no_telepon }}</td>
                 <td>{{ $user->alamat }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
-                    <!-- Contoh action, misalnya untuk melihat detail -->
-                    <a href="#" class="btn btn-info btn-sm">Detail</a>
+                    <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="{{ route('admin.users.delete', $user->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apa anda yakin ingin menghapus user?');">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach
@@ -38,5 +51,4 @@
     </table>
 </div>
 <link rel="stylesheet" href="{{ asset('css/admin/dataUser.css') }}">
-
 @endsection

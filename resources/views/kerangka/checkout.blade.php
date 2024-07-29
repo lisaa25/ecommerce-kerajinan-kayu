@@ -1,9 +1,14 @@
 @extends('layout.master')
 
 @section('checkout')
-<section id="cart">
+<section id="cart" style=" background-color: #d6efd8;">
     <div class="container">
-        <h1>Keranjang Belanja</h1>
+        <h1>Checkout</h1>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         @if (session('cart') && count(session('cart')) > 0)
             <table class="table">
                 <thead>
@@ -75,15 +80,18 @@
         snap.pay('{{ $snapToken }}', {
             onSuccess: function(result) {
                 console.log(result);
-                // Redirect atau tangani sukses
+                document.getElementById('payment-form').submit();
             },
             onPending: function(result) {
                 console.log(result);
-                // Tangani pembayaran tertunda
+                document.getElementById('payment-form').submit();
             },
             onError: function(result) {
                 console.log(result);
-                // Tangani error
+                alert('Pembayaran gagal! Silakan coba lagi.');
+            },
+            onClose: function() {
+                alert('Anda menutup popup tanpa menyelesaikan pembayaran.');
             }
         });
     });

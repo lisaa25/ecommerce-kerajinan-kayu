@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/navbar.css') }}">
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="admin-dashboard">
@@ -17,11 +19,11 @@
         <div class="main-content">
             <div class="navbar">
                 <div class="logo">
-                    <h1>Your Business Logo</h1>
+                    <h1>Admin Dashboard</h1>
                 </div>
                 <div class="user-info">
                     @if(Auth::guard('admin')->check())
-                        <span>Welcome, {{ Auth::guard('admin')->user()->name }}</span>
+                        <span>Welcome, {{ Auth::guard('admin')->user()->nama }}</span>
                         <a href="#" 
                            onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">

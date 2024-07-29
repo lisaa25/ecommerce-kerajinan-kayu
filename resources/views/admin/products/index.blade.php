@@ -2,15 +2,21 @@
 @section('content')
 <div class="container">
     <h1>Product List</h1>
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Gambar Produk</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th>Actions</th>
+                <th>Gambar</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -34,22 +40,30 @@
                             <form action="{{ route('admin.products.deactivate', $product->id_produk) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('POST')
-                                <button type="submit" class="btn btn-deactivate">Deactivate</button>
+                                <button type="submit" class="btn btn-deactivate" title="Deactivate">
+                                    <i class="fas fa-toggle-off"></i>
+                                </button>
                             </form>
                         @else
                             <!-- Activate Button -->
                             <form action="{{ route('admin.products.activate', $product->id_produk) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('POST')
-                                <button type="submit" class="btn btn-success">Activate</button>
+                                <button type="submit" class="btn btn-success" title="Activate">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
                             </form>
                         @endif
                         <!-- Edit and Delete Buttons -->
-                        <a href="{{ route('admin.products.edit', $product->id_produk) }}" class="btn btn-edit">Edit</a>
+                        <a href="{{ route('admin.products.edit', $product->id_produk) }}" class="btn btn-edit" title="Edit">
+                            <i class="fas fa-edit"></i>
+                        </a>
                         <form action="{{ route('admin.products.delete', $product->id_produk) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-delete">Delete</button>
+                            <button type="submit" class="btn btn-delete" title="Delete">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
                         </form>
                     </div>
                 </td>
@@ -58,7 +72,5 @@
         </tbody>
     </table>
 </div>
-<!-- css -->
 <link rel="stylesheet" href="{{ asset('css/admin/tabelProduk.css') }}">
-
 @endsection
