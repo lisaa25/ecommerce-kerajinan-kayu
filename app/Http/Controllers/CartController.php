@@ -66,18 +66,16 @@ class CartController extends Controller
     {
         $productId = $request->input('id_produk');
         $cart = session()->get('cart', []);
-
-        foreach ($cart as $index => $item) {
-            if ($item['id'] == $productId) {
-                unset($cart[$index]);
-                break;
-            }
+    
+        if (isset($cart[$productId])) {
+            unset($cart[$productId]);
         }
-
-        session()->put('cart', array_values($cart));
-
-        return redirect()->route('cart.show')->with('success', 'Produk berhasil dihapus dari keranjang');
+    
+        session()->put('cart', $cart);
+    
+        return redirect()->route('cart.show'); //->with('success', 'Produk berhasil dihapus dari keranjang');
     }
+    
 
     public function checkout()
 {

@@ -10,7 +10,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb_produk', function (Blueprint $table) {
-            $table->id('id_produk'); 
+            $table->id('id_produk'); // ini kolom yg aku buat di database
             $table->string('nama_produk');
             $table->decimal('harga', 8, 2);
             $table->string('gambar_produk');

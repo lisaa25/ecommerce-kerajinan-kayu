@@ -9,7 +9,7 @@ use App\Http\Controllers\ProdukController;
 
 class ModelProduk extends Model
 {
-    public $primaryKey ='id_produk';
+    public $primaryKey ='id_produk'; 
 
     protected $table ='tb_produk';
 
@@ -19,6 +19,6 @@ class ModelProduk extends Model
         'gambar_produk', 
         'kategori', 
         'deskripsi', 
-        'is_active'
+        'is_active' // aktifkan produk
     ];
 }
