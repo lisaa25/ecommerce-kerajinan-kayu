@@ -2,11 +2,11 @@
 #lokasi-dan-kontak {
     width: 100%;
     margin: auto;
-    background-color: #dad3be;
+    background-color: #5c8374;
 }
 
 #lokasi-dan-kontak h2 {
-    color: #5c3d2e;
+    color: #fff;
     font-family: "Lato", sans-serif;
     text-align: center;
     padding-top: 30px;
@@ -35,6 +35,9 @@ iframe {
     padding: 20px;
 }
 
+label {
+    color: #fff;
+}
 .kontak label,
 button {
     display: block;
@@ -52,8 +55,8 @@ button {
 }
 
 button {
-    background-color: #5c3d2e;
-    color: white;
+    background-color: #d6efd8;
+    color: black;
     border: none;
     width: 100px;
     height: 30px;
@@ -64,7 +67,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: #5c3d2e;
+    color: black;
 }
 
 button:active {

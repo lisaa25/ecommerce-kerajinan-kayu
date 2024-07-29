@@ -1,20 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-}
-
+/* public/css/admin/tabelProduk.css */
 .container {
-    margin: 50px auto;
-    max-width: 1200px;
+    margin: 20px;
+    margin-top: 50px;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
+    font-size: 24px;
     color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .table {
@@ -23,20 +21,29 @@ h1 {
     margin-bottom: 20px;
 }
 
-.table th,
-.table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.table thead th {
+    background-color: #5c8374;
+    color: #fff;
+    padding: 12px;
     text-align: left;
 }
 
-.table th {
-    background-color: #333;
-    color: white;
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
 }
 
 .table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table td,
+.table th {
+    padding: 12px;
+    text-align: left;
 }
 
 .table img {
@@ -51,13 +58,20 @@ h1 {
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 10px;
     margin: 5px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 5px;
 }
 
 .btn-edit {

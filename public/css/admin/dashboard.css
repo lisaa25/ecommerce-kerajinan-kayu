@@ -1,4 +1,12 @@
 /* dashboard.css */
+* {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-color: #d6efd8; /* Warna background dashboard */
+}
+
 .admin-dashboard {
     display: flex;
 }
@@ -9,51 +17,12 @@
     width: 100%;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 250px; /* Disesuaikan dengan lebar sidebar */
-    z-index: 1;
-}
-
-.logo h1 {
-    margin: 0;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-}
-
-.user-info span {
-    margin-right: 20px;
-}
-
-.user-info a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #444;
-    border-radius: 5px;
-}
-
-.user-info a:hover {
-    background-color: #555;
-}
-
 /* navbar.css */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #5c8374; /* Warna background navbar */
     color: white;
     padding: 10px 20px;
     position: fixed;
@@ -63,8 +32,10 @@
     z-index: 1;
 }
 
-.logo h1 {
+.navbar .logo h1 {
     margin: 0;
+    font-size: 1.2em;
+    color: #fff; /* Warna teks logo */
 }
 
 .user-info {
@@ -80,10 +51,12 @@
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    background-color: #444;
+    background-color: #5c8374;
     border-radius: 5px;
+    margin-right: 70px;
 }
 
 .user-info a:hover {
-    background-color: #555;
+    color: black;
+    background-color: #fff;
 }

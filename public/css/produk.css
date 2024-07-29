@@ -1,16 +1,19 @@
+body {
+    background-color: #d6efd8;
+}
 #produk {
     padding-top: 40px;
     padding-bottom: 20px;
     /*color: #803d3b;*/
     width: 100%;
     margin: auto;
-    background-color: #fff;
+    background-color: #d6efd8;
 }
 
 .container {
     margin-bottom: 50px; /* jarak container */
     color: white;
-    background-color: #fff;
+    background-color: #d6efd8;
     padding: 20px; /* Jarak di dalam container */
     border-radius: 10px; /* Membuat sudut container melengkung */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */

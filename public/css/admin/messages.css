@@ -1,14 +1,12 @@
 /* Global Styles */
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px;
+    margin-top: 50px;
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Table Styles */
@@ -18,16 +16,29 @@ table {
     margin-bottom: 20px;
 }
 
-table th,
-table td {
+table thead th {
+    background-color: #5c8374;
+    color: white;
     padding: 12px;
     text-align: left;
-    border: 1px solid #ddd;
 }
 
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+table td,
 table th {
-    background-color: #007bff;
-    color: white;
+    padding: 12px;
+    text-align: left;
 }
 
 table tr:nth-child(even) {
@@ -39,18 +50,24 @@ table tr:hover {
 }
 
 /* Button Styles */
-.btn-reply {
-    background-color: #28a745;
-    color: white;
+.btn-reply,
+.btn-delete {
+    background-color: transparent;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    color: #007bff;
+    transition: color 0.3s ease;
 }
 
-.btn-reply:hover {
-    background-color: #218838;
+.btn-reply:hover,
+.btn-delete:hover {
+    color: #0056b3;
+}
+
+.btn-reply i,
+.btn-delete i {
+    font-size: 18px;
 }
 
 /* Modal Styles */
