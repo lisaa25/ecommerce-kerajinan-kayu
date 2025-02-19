@@ -31,8 +31,9 @@
 
 .description p {
     font-family: "Times New Roman", Times, serif;
-    font-size: 20px;
-    padding: 60px 60px;
+    font-size: 23px;
+    padding: 60px 40px;
+    margin-left: 40px;
 }
 
 .image {
@@ -42,8 +43,8 @@
 }
 
 .image img {
-    width: 60%;
-    height: 60%;
+    width: 49%;
+    height: 49%;
     margin: 20px;
     /*margin: 40px 30px;*/
     border-radius: 20px;
@@ -66,26 +67,17 @@
     padding: 60px 60px;
 }
 
-.image img {
-    width: 50%;
-    height: 40%;
-    margin: 40px 30px;
-    border-radius: 20px;
-    display: block;
-}
-
 /* kelebihan */
 #kelebihan {
     padding: 30px 70px 30px 30px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     font-family: "Lato", sans-serif;
-    /*background-color: #dad3be;*/
+    align-items: center;
 }
 
 #kelebihan h1,
 h3 {
     color: #fff;
-    /*color: #1a4d2e;*/
     text-align: center;
     font-family: "Lato", sans-serif;
     font-weight: bold;
@@ -98,12 +90,12 @@ h3 {
 }
 
 .satu {
-    /*background-color: white;*/
     background-color: #fff;
     display: inline-block;
     margin: 10px;
-    width: 22.5%;
+    width: 21.5%;
     border-radius: 20px;
+    margin-left: 30px;
 }
 
 /* Tambahkan efek hover */

@@ -21,6 +21,7 @@ class ContactController extends Controller
             'pesan' => $request->pesan,
         ]);
 
+    
         return redirect()->back()->with('success', 'Pesan Anda telah terkirim!');
     }
 }

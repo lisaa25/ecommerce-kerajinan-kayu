@@ -7,7 +7,7 @@ body {
 
 /*navbar */
 #navbar {
-    background-color: white;
+    background-color: #fdfaf6;
     text-align: center;
     width: 100%;
     display: flex;
@@ -27,7 +27,7 @@ body {
 
 /* nama toko */
 #nama-toko {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Lato", sans-serif;
 }
 

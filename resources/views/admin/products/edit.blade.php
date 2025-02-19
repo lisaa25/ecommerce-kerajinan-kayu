@@ -19,6 +19,10 @@
             <textarea id="deskripsi" name="deskripsi" required>{{ $product->deskripsi }}</textarea>
         </div>
         <div class="form-group">
+            <label for="kategori">Deskripsi</label>
+            <input type="text" id="kategori" name="kategori" value="{{ $product->kategori }}" required>
+        </div>
+        <div class="form-group">
             <label for="gambar_produk">Gambar Produk</label>
             <input type="file" id="gambar_produk" name="gambar_produk">
             <img src="{{ asset('img/produk/' . $product->gambar_produk) }}" alt="{{ $product->nama_produk }}" width="100">

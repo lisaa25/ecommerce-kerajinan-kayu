@@ -29,7 +29,7 @@ class AdminController extends Controller
 
         if ($admin && Hash::check($request->password, $admin->password)) {
             Auth::guard('admin')->login($admin);
-            return redirect()->route('admin.dashboard')->with('success', 'Admin logged in successfully');
+            return redirect()->route('admin.products')->with('success', 'Admin logged in successfully');
         } else {
             return redirect()
                 ->route('loginAdmin')
@@ -89,6 +89,7 @@ class AdminController extends Controller
         return redirect()->route('admin.products')->with('error', 'Product not found');
     }
 
+    
     // Edit produk (menampilkan form edit)
     public function editProduct($id)
     {
@@ -134,10 +135,47 @@ class AdminController extends Controller
         return redirect()->route('admin.products')->with('error', 'Product not found');
     }
 
+
     // Menampilkan data pengguna
     public function showUsers()
     {
         $users = ModelUser::all(); // Ambil semua data pengguna dari tabel tb_user
         return view('admin.dataUser', compact('users'));
     }
+
+     // Menghapus pengguna
+     public function deleteUser($id)
+     {
+         $user = ModelUser::find($id);
+         if ($user) {
+             $user->delete();
+             return redirect()->route('admin.users')->with('success', 'User deleted successfully');
+         }
+         return redirect()->route('admin.users')->with('error', 'User not found');
+     }
+
+       // Menampilkan form edit pengguna
+    public function editUser($id)
+    {
+        $user = ModelUser::find($id);
+        if ($user) {
+            return view('admin.editUser', compact('user'));
+        }
+        return redirect()->route('admin.users')->with('error', 'User not found');
+    }
+
+      // Update pengguna
+      public function updateUser(Request $request, $id)
+      {
+          $user = ModelUser::find($id);
+          if ($user) {
+              $user->update($request->all());
+              return redirect()->route('admin.users')->with('success', 'User updated successfully');
+          }
+          return redirect()->route('admin.users')->with('error', 'User not found');
+      }
+
+
+
+
 }

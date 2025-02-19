@@ -2,16 +2,18 @@
 footer {
     background-color: black;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
+    max-width: 1200px;
     padding: 30px;
 }
 
@@ -33,7 +35,7 @@ footer {
 .footer-column {
     flex: 1;
     min-width: 150px;
-    margin-right: 20px;
+    margin: 10px;
 }
 
 .footer-column h3 {
@@ -45,10 +47,10 @@ footer {
 .footer-column ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .footer-column ul li {
-    text-align: center;
     margin-bottom: 5px;
 }
 
@@ -58,19 +60,30 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    color: #ff0000;
+    color: #a79277;
 }
 
-.social-icons {
+.faq-list {
+    text-align: left;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.social-icons ul li {
+    margin-bottom: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-content: center; /* Menyusun ikon dan teks secara horizontal */
+    align-items: center; /* Memastikan ikon dan teks berada di tengah vertikal */
 }
 
 .social-icons i {
     color: white;
-    margin-right: 5px;
+    margin-right: 10px;
+    font-size: 24px; /* Ukuran icon diperbesar */
 }
 
 .social-icons a {
@@ -79,12 +92,92 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #ff0000;
+    color: #a79277;
 }
 
-.copyright {
+.footer-bottom {
     text-align: center;
-    font-size: 20px;
-    padding-top: 30px;
+    padding-top: 20px;
     width: 100%;
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    overflow-y: auto; /* Add scrolling if content overflows */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step img {
+    max-width: 60%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    margin: 0;
+    color: black;
+    text-align: start;
+    font-size: 15px;
+}
+
+.step p {
+    margin: 0;
 }

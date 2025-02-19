@@ -29,7 +29,15 @@ class MessageController extends Controller
 
         Mail::to($message->email)->send(new ReplyMessage($request->reply_message));
 
-        return redirect()->route('admin.messages')->with('success', 'Balasan berhasil dikirim!');
+        //return redirect()->route('admin.messages')->with('success', 'Balasan berhasil dikirim!');
+    }
+
+    public function destroy($id)
+    {
+        $message = ModelContact::findOrFail($id);
+        $message->delete();
+
+        return redirect()->route('admin.messages.index')->with('success', 'Pesan berhasil dihapus.');
     }
 }
 

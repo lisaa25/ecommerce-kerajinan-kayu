@@ -1,24 +1,33 @@
 @extends('layout.master')
 
 @section('checkout')
-<section id="cart" style=" background-color: #d6efd8;">
-    <div class="container">
-        <h1>Checkout</h1>
+<section id="checkout">
+    <div class="container-checkout">
+        <h1 id="checkout-h1">Checkout</h1>
+
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
         @endif
+
+        @auth
+            <div class="user-info">
+                <p><strong>Informasi Penerima :</strong></p>
+                <p><strong>Nama:</strong> {{ auth()->user()->nama }}</p>
+                <p><strong>Alamat:</strong> {{ auth()->user()->alamat }}</p>
+                <p><strong>Telepon:</strong> {{ auth()->user()->no_telepon }}</p>
+            </div>
+        @endauth
+
         @if (session('cart') && count(session('cart')) > 0)
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Gambar</th>
                         <th>Produk</th>
                         <th>Harga</th>
                         <th>Jumlah</th>
                         <th>Total</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,37 +36,24 @@
                     @endphp
                     @foreach (session('cart') as $id => $details)
                         <tr>
-                            <td>
-                                @if(isset($details['gambar_produk']))
-                                    <img src="{{ asset('img/produk/'.$details['gambar_produk']) }}" alt="{{ $details['nama_produk'] }}" class="product-image">
-                                @else
-                                    <span>Gambar tidak tersedia</span>
-                                @endif
-                            </td>
                             <td>{{ $details['nama_produk'] }}</td>
                             <td>Rp.{{ number_format($details['harga'], 0, ',', '.') }}</td>
                             <td>{{ $details['quantity'] }}</td>
                             <td>Rp.{{ number_format($details['harga'] * $details['quantity'], 0, ',', '.') }}</td>
-                            <td>
-                                <form action="{{ route('cart.remove') }}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="id_produk" value="{{ $id }}">
-                                    <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
-                            </td>
                         </tr>
                         @php
                             $totalPrice += $details['harga'] * $details['quantity'];
                         @endphp
                     @endforeach
                     <tr>
-                        <td colspan="4"><strong>Total</strong></td>
+                        <td colspan="3"><strong>Total</strong></td>
                         <td><strong>Rp.{{ number_format($totalPrice, 0, ',', '.') }}</strong></td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
-            <div class="checkout-button">
+
+            <div class="checkout-buttons">
+                <a href="{{ route('cart.show') }}" class="btn btn-secondary" id="cancel-button">Batal</a>
                 <form id="payment-form" method="post" action="{{ route('checkout.process') }}">
                     @csrf
                     <input type="hidden" name="total_price" value="{{ $totalPrice }}">
@@ -70,7 +66,7 @@
         @endif
     </div>
 </section>
-<link rel="stylesheet" href="{{ asset('css/cart.css') }}">
+<link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
 
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}"></script>
 

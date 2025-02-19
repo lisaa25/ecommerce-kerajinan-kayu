@@ -1,15 +1,15 @@
+/* Container */
 #detail-produk {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 
-.container {
-    width: 100%;
-    max-width: 900px; /* Lebar maksimum kontainer */
-    margin: 0 auto;
-    margin-top: 70px;
+.container-detail {
+    max-width: 900px;
+    margin: 70px auto 0;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .row {
@@ -26,38 +26,61 @@
 }
 
 .img-fluid {
-    width: 100%;
+    width: 90%;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 24px;
+#nama-produk {
+    font-size: 1.6em;
     margin-bottom: 10px;
+    color: #333;
+    text-align: left; /* Pastikan H1 tidak di-center */
 }
 
 .price {
-    font-size: 20px;
-    color: grey;
+    font-size: 1.5em;
+    color: #ff5733;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
+/* Button */
 .btn-primary {
     background-color: #007bff;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1em;
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container-detail {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
 }

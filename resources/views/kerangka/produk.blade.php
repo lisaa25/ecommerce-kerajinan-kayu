@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('produk')
-    <section id="produk">
+    <section id="produk-section" style=" width: 100%">
         <div class="container">
             <h1>KERAJINAN</h1>
             <div class="product-container">
@@ -19,7 +19,7 @@
                 @endforeach
             </div>
         </div>
-
+        
         <div class="container">
             <h1>FURNITURE</h1>
             <div class="product-container">

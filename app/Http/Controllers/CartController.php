@@ -21,7 +21,6 @@ class CartController extends Controller
         return view('kerangka.cart', compact('totalPrice'));
     }
     
-
     // Menambah produk ke keranjang belanja
     public function addToCart(Request $request)
     {

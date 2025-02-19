@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #d6efd8; /* Warna background dashboard */
+    background-color: #d8d9da; /* Warna background dashboard */
 }
 
 .admin-dashboard {
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5c8374; /* Warna background navbar */
+    background-color: #272829; /* Warna background navbar */
     color: white;
     padding: 10px 20px;
     position: fixed;

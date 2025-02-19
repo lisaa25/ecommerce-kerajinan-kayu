@@ -10,6 +10,7 @@ class ModelOrder extends Model
     use HasFactory;
 
     protected $table = 'tb_order';
+    protected $primaryKey = 'id_order';
 
     protected $fillable = [
         'id_user',

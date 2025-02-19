@@ -7,7 +7,10 @@
     <title>WOODCRAFT | Toko Kerajinan Kayu</title>
     <!-- style-->
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/produk.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
     <!--ikon-->
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>

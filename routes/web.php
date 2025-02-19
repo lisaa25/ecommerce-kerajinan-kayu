@@ -10,8 +10,9 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserInformationController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ProductController; // Pastikan ini ada di bagian atas
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PaymentNotificationController;
+
 
 // Menguji koneksi database
 Route::get('test-connection', function () {
@@ -67,7 +68,12 @@ Route::group(['middleware' => ['auth:admin']], function () {
 
     // Routes untuk data user
     Route::get('/admin/users', [AdminController::class, 'showUsers'])->name('admin.users');
+    Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.users.delete');
+    Route::get('/admin/users/{id}/edit', [AdminController::class, 'editUser'])->name('admin.users.edit');
+    Route::put('/admin/users/{id}', [AdminController::class, 'updateUser'])->name('admin.users.update');
 });
+
+
 
 // Rute detail produk
 Route::get('/produk/{id_produk}', [ProdukController::class, 'show'])->name('produk.show');
@@ -91,6 +97,7 @@ Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.c
 Route::post('/cart/remove', [CartController::class, 'removeFromCart'])->name('cart.remove');
 Route::get('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 
+
 // Rute pencarian
 Route::get('/search', [ProdukController::class, 'search'])->name('search');
 
@@ -99,5 +106,9 @@ Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('chec
 Route::post('/checkout', [CheckoutController::class, 'processCheckout'])->name('checkout.process');
 
 //route membalas pesan
-Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages');
+Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');
 Route::post('/admin/messages/reply', [MessageController::class, 'reply'])->name('admin.messages.reply');
+Route::delete('/admin/messages/{id}', [MessageController::class, 'destroy'])->name('admin.messages.delete');
+
+//pemanggilan database
+Route::post('/payment/notification', [PaymentNotificationController::class, 'handle']);

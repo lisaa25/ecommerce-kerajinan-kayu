@@ -16,6 +16,7 @@
                 <th>Nama</th>
                 <th>Harga</th>
                 <th>Deskripsi</th>
+                <th>Kategori</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                 <td>{{ $product->nama_produk }}</td>
                 <td>{{ number_format($product->harga, 0, ',', '.') }}</td>
                 <td>{{ $product->deskripsi }}</td>
+                <td>{{ $product->kategori }}</td>
                 <td>
                     <div class="button-container">
                         @if ($product->is_active)
